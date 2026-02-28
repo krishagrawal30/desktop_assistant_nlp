@@ -1,242 +1,902 @@
 [
-  {"text": "Move report.pdf to documents folder", "intent": "MOVE_FILE"},
-  {"text": "Shift resume.docx from desktop into downloads", "intent": "MOVE_FILE"},
-  {"text": "Transfer notes.txt to projects directory", "intent": "MOVE_FILE"},
-  {"text": "Relocate image.png from downloads to pictures", "intent": "MOVE_FILE"},
-  {"text": "Send assignment.docx into college folder", "intent": "MOVE_FILE"},
-  {"text": "Move budget.xlsx over to finance directory", "intent": "MOVE_FILE"},
-  {"text": "Place data.csv inside analytics folder", "intent": "MOVE_FILE"},
-  {"text": "Take archive.zip to backup folder", "intent": "MOVE_FILE"},
-  {"text": "Move script.py from desktop to coding folder", "intent": "MOVE_FILE"},
-  {"text": "Put thesis.docx in research directory", "intent": "MOVE_FILE"},
-  {"text": "Move video.mp4 into media folder", "intent": "MOVE_FILE"},
-  {"text": "Shift presentation.pptx to slides folder", "intent": "MOVE_FILE"},
-  {"text": "Transfer invoice.pdf into bills directory", "intent": "MOVE_FILE"},
-  {"text": "Move log.txt to logs folder", "intent": "MOVE_FILE"},
-  {"text": "Relocate project.docx from downloads to workspace", "intent": "MOVE_FILE"},
-
-  {"text": "Find report.pdf on my computer", "intent": "SEARCH_FILE"},
-  {"text": "Search for resume.docx in the system", "intent": "SEARCH_FILE"},
-  {"text": "Locate notes.txt file", "intent": "SEARCH_FILE"},
-  {"text": "Can you find assignment.docx", "intent": "SEARCH_FILE"},
-  {"text": "Look up image.png in storage", "intent": "SEARCH_FILE"},
-  {"text": "Search data.csv across folders", "intent": "SEARCH_FILE"},
-  {"text": "Find archive.zip for me", "intent": "SEARCH_FILE"},
-  {"text": "Locate script.py in directories", "intent": "SEARCH_FILE"},
-  {"text": "Search presentation.pptx file", "intent": "SEARCH_FILE"},
-  {"text": "Find thesis.docx quickly", "intent": "SEARCH_FILE"},
-  {"text": "Look for invoice.pdf", "intent": "SEARCH_FILE"},
-  {"text": "Search log.txt in system", "intent": "SEARCH_FILE"},
-  {"text": "Find project.docx", "intent": "SEARCH_FILE"},
-  {"text": "Locate budget.xlsx", "intent": "SEARCH_FILE"},
-  {"text": "Search video.mp4 file", "intent": "SEARCH_FILE"},
-
-  {"text": "Rename report.pdf to annual_report.pdf", "intent": "RENAME_FILE"},
-  {"text": "Change resume.docx into cv_latest.docx", "intent": "RENAME_FILE"},
-  {"text": "Rename notes.txt as class_notes.txt", "intent": "RENAME_FILE"},
-  {"text": "Modify image.png to banner_image.png", "intent": "RENAME_FILE"},
-  {"text": "Rename assignment.docx to final_submission.docx", "intent": "RENAME_FILE"},
-  {"text": "Change data.csv into dataset_final.csv", "intent": "RENAME_FILE"},
-  {"text": "Rename archive.zip to backup_2026.zip", "intent": "RENAME_FILE"},
-  {"text": "Update script.py to main_app.py", "intent": "RENAME_FILE"},
-  {"text": "Rename thesis.docx to thesis_v2.docx", "intent": "RENAME_FILE"},
-  {"text": "Change invoice.pdf into bill_copy.pdf", "intent": "RENAME_FILE"},
-  {"text": "Rename log.txt to output_log.txt", "intent": "RENAME_FILE"},
-  {"text": "Modify project.docx to project_final.docx", "intent": "RENAME_FILE"},
-  {"text": "Rename presentation.pptx to seminar_slides.pptx", "intent": "RENAME_FILE"},
-  {"text": "Change budget.xlsx into yearly_budget.xlsx", "intent": "RENAME_FILE"},
-  {"text": "Rename video.mp4 to intro_clip.mp4", "intent": "RENAME_FILE"},
-
-  {"text": "Open report.pdf for me", "intent": "OPEN_FILE"},
-  {"text": "Launch resume.docx", "intent": "OPEN_FILE"},
-  {"text": "Open the notes.txt file", "intent": "OPEN_FILE"},
-  {"text": "Please open assignment.docx", "intent": "OPEN_FILE"},
-  {"text": "Access image.png", "intent": "OPEN_FILE"},
-  {"text": "Open data.csv in default app", "intent": "OPEN_FILE"},
-  {"text": "Launch archive.zip", "intent": "OPEN_FILE"},
-  {"text": "Open script.py", "intent": "OPEN_FILE"},
-  {"text": "Access thesis.docx", "intent": "OPEN_FILE"},
-  {"text": "Open invoice.pdf now", "intent": "OPEN_FILE"},
-  {"text": "Launch log.txt", "intent": "OPEN_FILE"},
-  {"text": "Open project.docx file", "intent": "OPEN_FILE"},
-  {"text": "Access budget.xlsx", "intent": "OPEN_FILE"},
-  {"text": "Open presentation.pptx", "intent": "OPEN_FILE"},
-  {"text": "Launch video.mp4", "intent": "OPEN_FILE"},
-
-  {"text": "Run script.py", "intent": "RUN_FILE"},
-  {"text": "Execute program.exe", "intent": "RUN_FILE"},
-  {"text": "Start application.exe", "intent": "RUN_FILE"},
-  {"text": "Play music.mp3", "intent": "RUN_FILE"},
-  {"text": "Play video.mp4 file", "intent": "RUN_FILE"},
-  {"text": "Execute installer.exe", "intent": "RUN_FILE"},
-  {"text": "Run main_app.py", "intent": "RUN_FILE"},
-  {"text": "Start demo_program.exe", "intent": "RUN_FILE"},
-  {"text": "Play movie_clip.mp4", "intent": "RUN_FILE"},
-  {"text": "Run setup.exe", "intent": "RUN_FILE"},
-  {"text": "Execute build.exe", "intent": "RUN_FILE"},
-  {"text": "Start game.exe", "intent": "RUN_FILE"},
-  {"text": "Play audio_track.mp3", "intent": "RUN_FILE"},
-  {"text": "Run test_script.py", "intent": "RUN_FILE"},
-  {"text": "Execute application file app.exe", "intent": "RUN_FILE"},
-
-  {"text": "Create a new file named notes.txt", "intent": "CREATE_FILE"},
-  {"text": "Make a document called report.docx", "intent": "CREATE_FILE"},
-  {"text": "Generate file data.csv", "intent": "CREATE_FILE"},
-  {"text": "Create empty file log.txt", "intent": "CREATE_FILE"},
-  {"text": "Make new script named app.py", "intent": "CREATE_FILE"},
-  {"text": "Create project.docx file", "intent": "CREATE_FILE"},
-  {"text": "Generate summary.txt", "intent": "CREATE_FILE"},
-  {"text": "Create thesis_draft.docx", "intent": "CREATE_FILE"},
-  {"text": "Make new budget.xlsx", "intent": "CREATE_FILE"},
-  {"text": "Create presentation_new.pptx", "intent": "CREATE_FILE"},
-  {"text": "Generate config.txt", "intent": "CREATE_FILE"},
-  {"text": "Create notes2.txt", "intent": "CREATE_FILE"},
-  {"text": "Make invoice_new.pdf", "intent": "CREATE_FILE"},
-  {"text": "Create temp_data.csv", "intent": "CREATE_FILE"},
-  {"text": "Generate empty file draft.docx", "intent": "CREATE_FILE"},
-
-  {"text": "Delete report.pdf permanently", "intent": "DELETE_FILE"},
-  {"text": "Remove resume.docx from system", "intent": "DELETE_FILE"},
-  {"text": "Delete notes.txt file", "intent": "DELETE_FILE"},
-  {"text": "Erase assignment.docx", "intent": "DELETE_FILE"},
-  {"text": "Remove image.png", "intent": "DELETE_FILE"},
-  {"text": "Delete data.csv", "intent": "DELETE_FILE"},
-  {"text": "Remove archive.zip", "intent": "DELETE_FILE"},
-  {"text": "Delete script.py", "intent": "DELETE_FILE"},
-  {"text": "Erase thesis.docx", "intent": "DELETE_FILE"},
-  {"text": "Remove invoice.pdf", "intent": "DELETE_FILE"},
-  {"text": "Delete log.txt now", "intent": "DELETE_FILE"},
-  {"text": "Remove project.docx", "intent": "DELETE_FILE"},
-  {"text": "Delete budget.xlsx", "intent": "DELETE_FILE"},
-  {"text": "Erase presentation.pptx", "intent": "DELETE_FILE"},
-  {"text": "Remove video.mp4", "intent": "DELETE_FILE"},
-
-  {"text": "Extract archive.zip into current folder", "intent": "EXTRACT_ZIP"},
-  {"text": "Unzip backup_2026.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Extract compressed file project_files.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Unpack data_bundle.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Extract report_archive.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Unzip documents_backup.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Extract media_files.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Uncompress thesis_material.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Extract resources.zip here", "intent": "EXTRACT_ZIP"},
-  {"text": "Unzip coding_assets.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Extract presentation_pack.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Unpack images_collection.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Extract setup_files.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Unzip invoice_bundle.zip", "intent": "EXTRACT_ZIP"},
-  {"text": "Extract project_backup_latest.zip", "intent": "EXTRACT_ZIP"},
-
-  {"text": "Select report.pdf and resume.docx", "intent": "SELECT_MULTIPLE"},
-  {"text": "Choose notes.txt along with data.csv", "intent": "SELECT_MULTIPLE"},
-  {"text": "Select image.png and photo.jpg together", "intent": "SELECT_MULTIPLE"},
-  {"text": "Highlight assignment.docx and thesis.docx", "intent": "SELECT_MULTIPLE"},
-  {"text": "Select script.py plus app.py", "intent": "SELECT_MULTIPLE"},
-  {"text": "Choose invoice.pdf and budget.xlsx", "intent": "SELECT_MULTIPLE"},
-  {"text": "Select presentation.pptx and project.docx", "intent": "SELECT_MULTIPLE"},
-  {"text": "Highlight log.txt and output_log.txt", "intent": "SELECT_MULTIPLE"},
-  {"text": "Select archive.zip and backup_2026.zip", "intent": "SELECT_MULTIPLE"},
-  {"text": "Choose video.mp4 and intro_clip.mp4", "intent": "SELECT_MULTIPLE"},
-  {"text": "Select data.csv with dataset_final.csv", "intent": "SELECT_MULTIPLE"},
-  {"text": "Highlight summary.txt and notes2.txt", "intent": "SELECT_MULTIPLE"},
-  {"text": "Select app.exe and installer.exe", "intent": "SELECT_MULTIPLE"},
-  {"text": "Choose thesis_v2.docx and draft.docx", "intent": "SELECT_MULTIPLE"},
-  {"text": "Select banner_image.png and image.png", "intent": "SELECT_MULTIPLE"},
-
-  {"text": "Shut down the system now", "intent": "SHUTDOWN"},
-  {"text": "Turn off my computer", "intent": "SHUTDOWN"},
-  {"text": "Power off the machine", "intent": "SHUTDOWN"},
-  {"text": "Shutdown computer immediately", "intent": "SHUTDOWN"},
-  {"text": "Switch off the PC", "intent": "SHUTDOWN"},
-  {"text": "Shut the system down", "intent": "SHUTDOWN"},
-  {"text": "Power down this computer", "intent": "SHUTDOWN"},
-  {"text": "Turn the system off", "intent": "SHUTDOWN"},
-  {"text": "Shutdown the laptop", "intent": "SHUTDOWN"},
-  {"text": "Force shutdown the system", "intent": "SHUTDOWN"},
-  {"text": "Turn off the workstation", "intent": "SHUTDOWN"},
-  {"text": "Shut everything down", "intent": "SHUTDOWN"},
-  {"text": "Power off system", "intent": "SHUTDOWN"},
-  {"text": "Shutdown device", "intent": "SHUTDOWN"},
-  {"text": "Switch off computer now", "intent": "SHUTDOWN"},
-
-  {"text": "Restart the system", "intent": "RESTART"},
-  {"text": "Reboot my computer", "intent": "RESTART"},
-  {"text": "Restart computer now", "intent": "RESTART"},
-  {"text": "Reboot the laptop", "intent": "RESTART"},
-  {"text": "Restart the machine", "intent": "RESTART"},
-  {"text": "Reboot system immediately", "intent": "RESTART"},
-  {"text": "Restart this device", "intent": "RESTART"},
-  {"text": "Reboot workstation", "intent": "RESTART"},
-  {"text": "Restart PC", "intent": "RESTART"},
-  {"text": "Restart everything", "intent": "RESTART"},
-  {"text": "Reboot system now", "intent": "RESTART"},
-  {"text": "Restart the laptop now", "intent": "RESTART"},
-  {"text": "Reboot computer quickly", "intent": "RESTART"},
-  {"text": "Restart operating system", "intent": "RESTART"},
-  {"text": "Restart device immediately", "intent": "RESTART"},
-
-  {"text": "Suspend the system", "intent": "SUSPEND"},
-  {"text": "Put the computer to sleep", "intent": "SUSPEND"},
-  {"text": "Sleep the system", "intent": "SUSPEND"},
-  {"text": "Enter sleep mode", "intent": "SUSPEND"},
-  {"text": "Put laptop into sleep", "intent": "SUSPEND"},
-  {"text": "Suspend computer now", "intent": "SUSPEND"},
-  {"text": "Activate sleep mode", "intent": "SUSPEND"},
-  {"text": "Put device to sleep", "intent": "SUSPEND"},
-  {"text": "Enable suspend mode", "intent": "SUSPEND"},
-  {"text": "Sleep this workstation", "intent": "SUSPEND"},
-  {"text": "Suspend laptop immediately", "intent": "SUSPEND"},
-  {"text": "Put PC into sleep mode", "intent": "SUSPEND"},
-  {"text": "Activate system sleep", "intent": "SUSPEND"},
-  {"text": "Sleep computer now", "intent": "SUSPEND"},
-  {"text": "Suspend device", "intent": "SUSPEND"},
-
-  {"text": "Search for machine learning tutorials", "intent": "WEB_SEARCH"},
-  {"text": "Google artificial intelligence basics", "intent": "WEB_SEARCH"},
-  {"text": "Look for Python documentation", "intent": "WEB_SEARCH"},
-  {"text": "Search weather in Mumbai", "intent": "WEB_SEARCH"},
-  {"text": "Find latest technology news", "intent": "WEB_SEARCH"},
-  {"text": "Search data structures notes online", "intent": "WEB_SEARCH"},
-  {"text": "Look for best programming languages 2026", "intent": "WEB_SEARCH"},
-  {"text": "Search cloud computing guide", "intent": "WEB_SEARCH"},
-  {"text": "Find cybersecurity roadmap", "intent": "WEB_SEARCH"},
-  {"text": "Search football scores today", "intent": "WEB_SEARCH"},
-  {"text": "Look for stock market updates", "intent": "WEB_SEARCH"},
-  {"text": "Search competitive programming tips", "intent": "WEB_SEARCH"},
-  {"text": "Find DevOps tutorials", "intent": "WEB_SEARCH"},
-  {"text": "Search blockchain explanation", "intent": "WEB_SEARCH"},
-  {"text": "Look for interview preparation questions", "intent": "WEB_SEARCH"},
-
-  {"text": "Search Wikipedia for Python programming", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Find Machine Learning on Wikipedia", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Look for Artificial Intelligence on Wikipedia", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Search Wikipedia for Operating Systems", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Find Cloud Computing on Wikipedia", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Look for Data Science on Wikipedia", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Search Wikipedia for Neural Networks", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Find Linux on Wikipedia", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Look for Robotics on Wikipedia", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Search Wikipedia for Blockchain", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Find Cybersecurity on Wikipedia", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Look for Algorithms on Wikipedia", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Search Wikipedia for Quantum Computing", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Find Internet history on Wikipedia", "intent": "SEARCH_WIKIPEDIA"},
-  {"text": "Look for Database systems on Wikipedia", "intent": "SEARCH_WIKIPEDIA"},
-
-  {"text": "Search YouTube for Python tutorial", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Find machine learning course on YouTube", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Search YouTube for data structures tutorial", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Find AI project demos on YouTube", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Search YouTube for C++ programming guide", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Find Java interview preparation videos on YouTube", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Search YouTube for React tutorial", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Find Django course on YouTube", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Search YouTube for cybersecurity basics", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Find DevOps roadmap on YouTube", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Search YouTube for Docker tutorial", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Find Kubernetes videos on YouTube", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Search YouTube for competitive programming practice", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Find NLP project ideas on YouTube", "intent": "SEARCH_YOUTUBE"},
-  {"text": "Search YouTube for system design concepts", "intent": "SEARCH_YOUTUBE"}
-
+  {
+    "text": "Move report.pdf to documents folder",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Shift resume.docx from desktop into downloads",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Transfer notes.txt to projects directory",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Relocate image.png from downloads to pictures",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Send assignment.docx into college folder",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Move budget.xlsx over to finance directory",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Place data.csv inside analytics folder",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Take archive.zip to backup folder",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Move script.py from desktop to coding folder",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Put thesis.docx in research directory",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Move video.mp4 into media folder",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Shift presentation.pptx to slides folder",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Transfer invoice.pdf into bills directory",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Move log.txt to logs folder",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Relocate project.docx from downloads to workspace",
+    "intent": "MOVE_FILE"
+  },
+  {
+    "text": "Find report.pdf on my computer",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Search for resume.docx in the system",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Locate notes.txt file",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Can you find assignment.docx",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Look up image.png in storage",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Search data.csv across folders",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Find archive.zip for me",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Locate script.py in directories",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Search presentation.pptx file",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Find thesis.docx quickly",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Look for invoice.pdf",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Search log.txt in system",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Find project.docx",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Locate budget.xlsx",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Search video.mp4 file",
+    "intent": "SEARCH_FILE"
+  },
+  {
+    "text": "Rename report.pdf to annual_report.pdf",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Change resume.docx into cv_latest.docx",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Rename notes.txt as class_notes.txt",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Modify image.png to banner_image.png",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Rename assignment.docx to final_submission.docx",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Change data.csv into dataset_final.csv",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Rename archive.zip to backup_2026.zip",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Update script.py to main_app.py",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Rename thesis.docx to thesis_v2.docx",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Change invoice.pdf into bill_copy.pdf",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Rename log.txt to output_log.txt",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Modify project.docx to project_final.docx",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Rename presentation.pptx to seminar_slides.pptx",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Change budget.xlsx into yearly_budget.xlsx",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Rename video.mp4 to intro_clip.mp4",
+    "intent": "RENAME_FILE"
+  },
+  {
+    "text": "Open report.pdf for me",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Launch resume.docx",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Open the notes.txt file",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Please open assignment.docx",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Access image.png",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Open data.csv in default app",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Launch archive.zip",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Open script.py",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Access thesis.docx",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Open invoice.pdf now",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Launch log.txt",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Open project.docx file",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Access budget.xlsx",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Open presentation.pptx",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Launch video.mp4",
+    "intent": "OPEN_FILE"
+  },
+  {
+    "text": "Run script.py",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Execute program.exe",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Start application.exe",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Play music.mp3",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Play video.mp4 file",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Execute installer.exe",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Run main_app.py",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Start demo_program.exe",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Play movie_clip.mp4",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Run setup.exe",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Execute build.exe",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Start game.exe",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Play audio_track.mp3",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Run test_script.py",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Execute application file app.exe",
+    "intent": "RUN_FILE"
+  },
+  {
+    "text": "Create a new file named notes.txt",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Make a document called report.docx",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Generate file data.csv",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Create empty file log.txt",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Make new script named app.py",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Create project.docx file",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Generate summary.txt",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Create thesis_draft.docx",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Make new budget.xlsx",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Create presentation_new.pptx",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Generate config.txt",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Create notes2.txt",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Make invoice_new.pdf",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Create temp_data.csv",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Generate empty file draft.docx",
+    "intent": "CREATE_FILE"
+  },
+  {
+    "text": "Delete report.pdf permanently",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Remove resume.docx from system",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Delete notes.txt file",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Erase assignment.docx",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Remove image.png",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Delete data.csv",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Remove archive.zip",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Delete script.py",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Erase thesis.docx",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Remove invoice.pdf",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Delete log.txt now",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Remove project.docx",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Delete budget.xlsx",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Erase presentation.pptx",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Remove video.mp4",
+    "intent": "DELETE_FILE"
+  },
+  {
+    "text": "Extract archive.zip into current folder",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Unzip backup_2026.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Extract compressed file project_files.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Unpack data_bundle.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Extract report_archive.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Unzip documents_backup.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Extract media_files.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Uncompress thesis_material.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Extract resources.zip here",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Unzip coding_assets.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Extract presentation_pack.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Unpack images_collection.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Extract setup_files.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Unzip invoice_bundle.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Extract project_backup_latest.zip",
+    "intent": "EXTRACT_ZIP"
+  },
+  {
+    "text": "Select report.pdf and resume.docx",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Choose notes.txt along with data.csv",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Select image.png and photo.jpg together",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Highlight assignment.docx and thesis.docx",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Select script.py plus app.py",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Choose invoice.pdf and budget.xlsx",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Select presentation.pptx and project.docx",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Highlight log.txt and output_log.txt",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Select archive.zip and backup_2026.zip",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Choose video.mp4 and intro_clip.mp4",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Select data.csv with dataset_final.csv",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Highlight summary.txt and notes2.txt",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Select app.exe and installer.exe",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Choose thesis_v2.docx and draft.docx",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Select banner_image.png and image.png",
+    "intent": "SELECT_MULTIPLE"
+  },
+  {
+    "text": "Shut down the system now",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Turn off my computer",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Power off the machine",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Shutdown computer immediately",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Switch off the PC",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Shut the system down",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Power down this computer",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Turn the system off",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Shutdown the laptop",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Force shutdown the system",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Turn off the workstation",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Shut everything down",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Power off system",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Shutdown device",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Switch off computer now",
+    "intent": "SHUTDOWN"
+  },
+  {
+    "text": "Restart the system",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Reboot my computer",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Restart computer now",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Reboot the laptop",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Restart the machine",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Reboot system immediately",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Restart this device",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Reboot workstation",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Restart PC",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Restart everything",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Reboot system now",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Restart the laptop now",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Reboot computer quickly",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Restart operating system",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Restart device immediately",
+    "intent": "RESTART"
+  },
+  {
+    "text": "Suspend the system",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Put the computer to sleep",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Sleep the system",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Enter sleep mode",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Put laptop into sleep",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Suspend computer now",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Activate sleep mode",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Put device to sleep",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Enable suspend mode",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Sleep this workstation",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Suspend laptop immediately",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Put PC into sleep mode",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Activate system sleep",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Sleep computer now",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Suspend device",
+    "intent": "SUSPEND"
+  },
+  {
+    "text": "Search for machine learning tutorials",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Google artificial intelligence basics",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Look for Python documentation",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Search weather in Mumbai",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Find latest technology news",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Search data structures notes online",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Look for best programming languages 2026",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Search cloud computing guide",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Find cybersecurity roadmap",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Search football scores today",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Look for stock market updates",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Search competitive programming tips",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Find DevOps tutorials",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Search blockchain explanation",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Look for interview preparation questions",
+    "intent": "WEB_SEARCH"
+  },
+  {
+    "text": "Search Wikipedia for Python programming",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Find Machine Learning on Wikipedia",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Look for Artificial Intelligence on Wikipedia",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Search Wikipedia for Operating Systems",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Find Cloud Computing on Wikipedia",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Look for Data Science on Wikipedia",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Search Wikipedia for Neural Networks",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Find Linux on Wikipedia",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Look for Robotics on Wikipedia",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Search Wikipedia for Blockchain",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Find Cybersecurity on Wikipedia",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Look for Algorithms on Wikipedia",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Search Wikipedia for Quantum Computing",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Find Internet history on Wikipedia",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Look for Database systems on Wikipedia",
+    "intent": "SEARCH_WIKIPEDIA"
+  },
+  {
+    "text": "Search YouTube for Python tutorial",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Find machine learning course on YouTube",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Search YouTube for data structures tutorial",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Find AI project demos on YouTube",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Search YouTube for C++ programming guide",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Find Java interview preparation videos on YouTube",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Search YouTube for React tutorial",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Find Django course on YouTube",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Search YouTube for cybersecurity basics",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Find DevOps roadmap on YouTube",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Search YouTube for Docker tutorial",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Find Kubernetes videos on YouTube",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Search YouTube for competitive programming practice",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Find NLP project ideas on YouTube",
+    "intent": "SEARCH_YOUTUBE"
+  },
+  {
+    "text": "Search YouTube for system design concepts",
+    "intent": "SEARCH_YOUTUBE"
+  }
 ]
