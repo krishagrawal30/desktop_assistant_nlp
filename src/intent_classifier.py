@@ -23,13 +23,12 @@ def train_models(texts, labels):
     vectorizer = TfidfVectorizer()
     X_full = vectorizer.fit_transform(texts)
 
-    # Define parameter grids
     param_grid_logistic = {
-        "C": [0.01, 0.1, 1, 10, 100]
+        "C": [0.1, 1, 5, 10, 20, 50, 100]
     }
 
     param_grid_svm = {
-    "C": [0.1, 1, 5, 10, 20, 50, 100]
+        "C": [0.1, 1, 5, 10, 20, 50, 100]
     }
 
     # GridSearch for Logistic Regression
@@ -60,7 +59,6 @@ def train_models(texts, labels):
     print("Best SVM Accuracy:", svm_grid.best_score_)
     print("Best SVM Params:", svm_grid.best_params_)
 
-    # Compare best cross-validation scores
     if logistic_grid.best_score_ > svm_grid.best_score_:
         best_model = logistic_grid.best_estimator_
         print("\nFinal Model Selected: Logistic Regression")
