@@ -1,23 +1,13 @@
-import os
-from intent_classifier import load_model, predict
+import joblib
+from ner import extract_entities
+model = joblib.load("models/intent_model.pkl")
+vectorizer = joblib.load("models/vectorizer.pkl")
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-MODEL_PATH = os.path.join(BASE_DIR, "models", "intent_model.pkl")
-VECTORIZER_PATH = os.path.join(BASE_DIR, "models", "vectorizer.pkl")
-
-
-def main():
-    model, vectorizer = load_model(MODEL_PATH, VECTORIZER_PATH)
-
-    print("Desktop Assistant NLP\n")
-
-    user_input = input("Enter command: ")
-
-    intent = predict(user_input, model, vectorizer)
-
-    print(f"Predicted Intent: {intent}")
-
-
-if __name__ == "__main__":
-    main()
+print("Desktop Assistant NLP")
+print()
+text = input("Enter command: ")
+X = vectorizer.transform([text])
+intent = model.predict(X)[0]
+print("Predicted Intent:", intent)
+entities = extract_entities(text, intent)
+print("Extracted Entities:", entities)
