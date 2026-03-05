@@ -1,5 +1,6 @@
 import joblib
 from ner import extract_entities
+from executor import execute
 model = joblib.load("models/intent_model.pkl")
 vectorizer = joblib.load("models/vectorizer.pkl")
 
@@ -11,3 +12,5 @@ intent = model.predict(X)[0]
 print("Predicted Intent:", intent)
 entities = extract_entities(text, intent)
 print("Extracted Entities:", entities)
+
+execute(intent, entities)
