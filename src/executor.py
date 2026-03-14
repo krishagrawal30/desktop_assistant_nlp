@@ -2,7 +2,7 @@ import os
 import shutil
 import zipfile
 
-SEARCH_ROOT="C:\\Users\\agraw\\OneDrive\\Desktop"
+SEARCH_ROOT="C:\\Users\\agraw"
 
 def find_file(filename,search_path=SEARCH_ROOT):
     for root,dirs,files in os.walk(search_path):
@@ -84,16 +84,6 @@ def execute(intent,entities):
         else:
             print("File not found")
 
-    elif intent=="SELECT_MULTIPLE":
-        extension=entities.get("extension")
-        files=find_multiple(extension)
-        if files:
-            print("Files found:")
-            for f in files:
-                print(f)
-        else:
-            print("No matching files found")
-
     elif intent=="OPEN_FILE":
         file=entities.get("file")
         file_path=find_file(file)
@@ -146,3 +136,6 @@ def execute(intent,entities):
 
     elif intent=="SUSPEND":
         os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
+
+    else:
+        print("Command not recognized")
