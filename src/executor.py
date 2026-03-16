@@ -3,6 +3,19 @@ import shutil
 import zipfile
 
 SEARCH_ROOT="C:\\Users\\agraw"
+import os
+
+def find_folder(folder_name, search_path=None):
+
+    if search_path is None:
+        search_path = os.path.expanduser("~")  # search entire user directory
+
+    for root, dirs, files in os.walk(search_path):
+        for d in dirs:
+            if folder_name.lower() in d.lower():
+                return os.path.join(root, d)
+
+    return None
 
 def find_file(filename,search_path=SEARCH_ROOT):
     for root,dirs,files in os.walk(search_path):
@@ -40,25 +53,41 @@ def execute(intent,entities):
         else:
             print("File not found")
 
-    elif intent=="MOVE_FILE":
-        file=entities.get("file")
-        destination=entities.get("destination")
-        file_path=find_file(file)
-        if file_path:
-            shutil.move(file_path,destination)
-            print("File moved successfully")
-        else:
-            print("File not found")
+    elif intent == "MOVE_FILE":
 
-    elif intent=="COPY_FILE":
-        file=entities.get("file")
-        destination=entities.get("destination")
-        file_path=find_file(file)
-        if file_path:
-            shutil.copy(file_path,destination)
-            print("File copied successfully")
+        file = entities.get("file")
+        destination = entities.get("destination")
+
+        file_path = find_file(file)
+        folder_path = find_folder(destination)
+
+        if file_path and folder_path:
+
+            new_path = os.path.join(folder_path, os.path.basename(file_path))
+            shutil.move(file_path, new_path)
+
+            print("File moved successfully")
+
         else:
-            print("File not found")
+            print("File or destination folder not found")
+
+    elif intent == "COPY_FILE":
+
+        file = entities.get("file")
+        destination = entities.get("destination")
+
+        file_path = find_file(file)
+        folder_path = find_folder(destination)
+
+        if file_path and folder_path:
+
+            new_path = os.path.join(folder_path, os.path.basename(file_path))
+            shutil.copy(file_path, new_path)
+
+            print("File copied successfully")
+
+        else:
+            print("File or destination folder not found")
 
     elif intent=="CREATE_FILE":
         name=entities.get("file")
