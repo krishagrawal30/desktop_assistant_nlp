@@ -1,5 +1,66 @@
 [
   {
+    "text": "Copy report.pdf to documents folder",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Duplicate resume.docx from desktop into downloads",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Copy notes.txt to projects directory",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Copy image.png from downloads to pictures folder",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Copy assignment.docx into college folder",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Duplicate budget.xlsx to finance directory",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Copy data.csv inside analytics folder",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Copy archive.zip to backup folder",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Copy script.py from desktop to coding folder",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Copy thesis.docx into research directory",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Copy video.mp4 to media folder",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Duplicate presentation.pptx into slides folder",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Copy invoice.pdf to bills directory",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Copy log.txt into logs folder",
+    "intent": "COPY_FILE"
+  },
+  {
+    "text": "Duplicate project.docx from downloads to workspace",
+    "intent": "COPY_FILE"
+  },
+
+  {
     "text": "Move report.pdf to documents folder",
     "intent": "MOVE_FILE"
   },
