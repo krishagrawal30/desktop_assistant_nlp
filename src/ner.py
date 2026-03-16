@@ -14,12 +14,21 @@ def extract_entities(text,intent):
             entities["new_name"]=match.group(2)
 
     elif intent in ["MOVE_FILE","COPY_FILE"]:
-        file_match=re.search(file_pattern,text)
-        dest_match=re.search(r"(?:to|into)\s+([\w\-\_\\/:]+)",text)
+        file_match = re.search(file_pattern, text)
+
+        # destination detection (handles: "to documents", "to the documents folder")
+        dest_match = re.search(r"(?:to|into)\s+(?:the\s+)?([\w\-\_\\/:]+)", text)
+
         if file_match:
-            entities["file"]=file_match.group(1)
+            entities["file"] = file_match.group(1)
+
         if dest_match:
-            entities["destination"]=dest_match.group(1)
+            destination = dest_match.group(1)
+
+            # clean words like "folder"
+            destination = destination.replace("folder", "").strip()
+
+            entities["destination"] = destination
 
     elif intent in ["DELETE_FILE","OPEN_FILE","RUN_FILE","SEARCH_FILE"]:
         match=re.search(file_pattern,text)
