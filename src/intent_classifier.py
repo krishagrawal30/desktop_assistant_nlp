@@ -31,7 +31,7 @@ def train_models(texts, labels):
         "C": [0.1, 1, 5, 10, 20, 50, 100]
     }
 
-    # GridSearch for Logistic Regression
+    
     logistic_grid = GridSearchCV(
         LogisticRegression(max_iter=1000),
         param_grid_logistic,
@@ -45,7 +45,7 @@ def train_models(texts, labels):
     print("Best Logistic Accuracy:", logistic_grid.best_score_)
     print("Best Logistic Params:", logistic_grid.best_params_)
 
-    # GridSearch for Linear SVM
+    
     svm_grid = GridSearchCV(
         LinearSVC(max_iter=5000),
         param_grid_svm,
@@ -66,7 +66,7 @@ def train_models(texts, labels):
         best_model = svm_grid.best_estimator_
         print("\nFinal Model Selected: Linear SVM")
 
-    # Retrain best model on FULL dataset
+    
     best_model.fit(X_full, labels)
 
     print("Final model retrained on full dataset.")

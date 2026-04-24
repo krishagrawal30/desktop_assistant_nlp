@@ -25,10 +25,8 @@ while True:
 
     entities = extract_entities(text, intent)
 
-    # commands that do not require entities
     SYSTEM_COMMANDS = {"SHUTDOWN","RESTART","SUSPEND"}
 
-    # if intent needs entities but none extracted → reject command
     if intent not in SYSTEM_COMMANDS and not entities:
         console.print("[red]Command not recognized.[/red]")
         continue
