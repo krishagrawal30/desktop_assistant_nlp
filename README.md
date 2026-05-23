@@ -328,15 +328,6 @@ The assistant handles 16 specific intent classes. Commands that don't match any 
 
 **Krish Agrawal** · **Prathmesh Agrawal**
 
-*B.Tech Final Year Project · Department of Computer Science · 2024–25*
-
-</div>
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
