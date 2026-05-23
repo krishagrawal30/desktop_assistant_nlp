@@ -327,7 +327,7 @@ The assistant handles 16 specific intent classes. Commands that don't match any 
 <div align="center">
 
 **Krish Agrawal** · **Prathmesh Agrawal**
-
+        
 
 ---
 
