@@ -1,275 +1,349 @@
-# 🌅 DAWN — Desktop Assistant and Web Navigator
+<div align="center">
 
-DAWN (**Desktop Assistant and Web Navigator**) is a fully offline **NLP-based desktop assistant** that understands natural language commands and performs **real OS-level actions** without requiring internet, APIs, or cloud services.
+```
+██████╗  █████╗ ██╗    ██╗███╗   ██╗
+██╔══██╗██╔══██╗██║    ██║████╗  ██║
+██║  ██║███████║██║ █╗ ██║██╔██╗ ██║
+██║  ██║██╔══██║██║███╗██║██║╚██╗██║
+██████╔╝██║  ██║╚███╔███╔╝██║ ╚████║
+╚═════╝ ╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═══╝
+```
 
-The assistant converts user commands into executable desktop actions using **Natural Language Processing (NLP)**, **Intent Classification**, and **Named Entity Recognition (NER)**.
+### **Desktop Assistant & Web Navigator**
+*An offline NLP-powered command interpreter — plain English in, real OS actions out.*
+
+<br/>
+
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Plotly](https://img.shields.io/badge/Plotly-Charts-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)](https://plotly.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-gold?style=for-the-badge)](LICENSE)
+[![Offline](https://img.shields.io/badge/Works-100%25%20Offline-22c55e?style=for-the-badge)](.)
+
+<br/>
+
+> *"What if your computer just understood you?"*
+
+</div>
+
+---
+
+## ⚡ What is DAWN?
+
+DAWN is a **fully offline NLP desktop assistant** that converts plain English commands into real operating system actions — no internet, no cloud, no API keys required.
+
+```
+You type:   "rename report.pdf to final_report.pdf"
+DAWN does:  renames the file on disk. instantly.
+
+You type:   "search for machine learning on youtube"
+DAWN does:  opens YouTube with that exact search.
+
+You type:   "move notes.txt to Downloads"
+DAWN does:  moves the file. no questions asked.
+```
+
+Under the hood: **TF-IDF vectorisation → LinearSVC intent classifier → Regex NER → OS execution**. Five stages. 16 intent classes. One pipeline.
+
+---
+
+## 📊 Performance
+
+<div align="center">
+
+| Metric | Score | Test Cases |
+|:---|:---:|:---:|
+| 🎯 Intent Classification Accuracy | **91.3%** | 80/20 split |
+| 🔍 NER Exact Match | **84.3%** | 70 cases |
+| ⚡ Full Pipeline (E2E) | **90%** | 48 cases |
+| 📦 Intent Classes | **16** | — |
+| 🧪 Total Test Cases | **118** | 3 layers |
+
+</div>
 
 ---
 
 ## 🚀 Features
 
-### 📂 File & Folder Operations
-- Create files
-- Open files
-- Delete files
-- Rename files
-- Search files
-- Move files
-- Copy files
-- Select multiple files by extension
+<table>
+<tr>
+<td width="50%">
 
-### 📦 Archive Operations
-- Extract ZIP files
+### 📂 File & Folder Operations
+```
+create notes.txt
+open report.pdf
+delete temp.txt
+rename old.txt to new.txt
+move report.pdf to Documents
+copy notes.txt to Backup
+search for budget.xlsx
+select all pdf
+```
+
+</td>
+<td width="50%">
 
 ### 🌐 Web Navigation
-- Search on Google
-- Search on YouTube
-- Search on Wikipedia
+```
+search for python tutorial on google
+look for lofi music on youtube
+find artificial intelligence on wikipedia
+```
 
-### 🧠 NLP Capabilities
-- Intent Classification using **TF-IDF + Machine Learning**
-- Named Entity Recognition using **Regex-based extraction**
-- Natural language understanding for desktop commands
+### 📦 Archive Operations
+```
+extract archive.zip
+```
 
-### 🔒 Offline Functionality
-- No cloud APIs
-- No internet dependency
-- Fully local execution
-- Privacy-friendly architecture
+### 🔒 System Commands
+```
+shutdown the computer
+restart the system
+suspend
+```
 
----
-
-## 🛠️ Tech Stack
-
-### Programming Language
-- Python
-
-### Machine Learning / NLP
-- Scikit-learn
-- TF-IDF Vectorization
-- Logistic Regression
-- Linear SVM
-
-### System Libraries
-- OS
-- Shutil
-- Zipfile
-- Webbrowser
-- Regex (re)
-
-### Dashboard / Evaluation
-- Streamlit
-- Plotly
+</td>
+</tr>
+</table>
 
 ---
 
 ## 🧠 How It Works
 
-DAWN follows a multi-stage NLP pipeline:
-
-```text
-User Command
-      ↓
-Text Preprocessing
-      ↓
-TF-IDF Vectorization
-      ↓
-Intent Classification
-(Logistic Regression / SVM)
-      ↓
-Named Entity Recognition (NER)
-      ↓
-Executor Layer
-(OS-level operations)
-      ↓
-Action Executed
+```
+┌─────────────────────────────────────────────────────────────┐
+│                      USER COMMAND                           │
+│         "rename report.pdf to final_report.pdf"             │
+└──────────────────────┬──────────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────────┐
+│                  TF-IDF VECTORISER                          │
+│           Converts text → sparse feature vector             │
+└──────────────────────┬──────────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────────┐
+│               INTENT CLASSIFIER (LinearSVC)                 │
+│              Predicts →  RENAME_FILE  ✓                     │
+└──────────────────────┬──────────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   NER ENGINE (Regex)                        │
+│   Extracts → old_name: report.pdf · new_name: final_report  │
+└──────────────────────┬──────────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────────┐
+│                     EXECUTOR                                │
+│            os.rename(old_path, new_path)                    │
+└──────────────────────┬──────────────────────────────────────┘
+                       │
+                       ▼
+               ✅  File renamed successfully
+```
 
 ---
-## ⚙️ Setup Guide (For New Users)
 
-Follow these steps to run the project locally.
+## 🛠️ Tech Stack
 
-### 1️⃣ Clone the Repository
+<div align="center">
+
+| Layer | Technology | Purpose |
+|:---|:---|:---|
+| Language | `Python 3.10+` | Core runtime |
+| Vectorisation | `TF-IDF (scikit-learn)` | Text → features |
+| Classification | `LinearSVC · LogisticRegression` | Intent prediction |
+| Hyperparameter tuning | `GridSearchCV · 5-fold CV` | Model selection |
+| NER | `re (Python regex)` | Entity extraction |
+| OS Execution | `os · shutil · zipfile · webbrowser` | System actions |
+| Terminal UI | `rich` | Styled terminal output |
+| Model persistence | `joblib` | Save / load models |
+| Evaluation dashboard | `Streamlit` | Interactive UI |
+| Charts | `Plotly` | Confusion matrix · F1 · radar |
+| Data | `pandas` | Tabular results |
+
+</div>
+
+---
+
+## ⚙️ Setup Guide
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/desktop-assistant-nlp.git
 cd desktop-assistant-nlp
 ```
 
----
-
-### 2️⃣ Create a Virtual Environment
-
-Create a virtual environment:
+### 2. Create and activate a virtual environment
 
 ```bash
+# Create
 python -m venv venv
-```
 
-Activate the environment:
-
-#### Windows
-
-```bash
+# Activate — Windows
 venv\Scripts\activate
-```
 
-#### Linux / MacOS
-
-```bash
+# Activate — Linux / macOS
 source venv/bin/activate
 ```
 
----
-
-### 3️⃣ Install Required Dependencies
-
-Install all required libraries:
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-If `requirements.txt` is unavailable:
+> If `requirements.txt` is unavailable:
+> ```bash
+> pip install scikit-learn pandas numpy streamlit plotly joblib rich
+> ```
 
-```bash
-pip install scikit-learn pandas numpy streamlit plotly joblib
+### 4. Verify project structure
+
 ```
-
----
-
-### 4️⃣ Verify Project Structure
-
-Ensure your folder structure looks like this:
-
-```text
 desktop-assistant-nlp/
-│── data/
-│   └── intent_dataset.json
-│
-│── models/
-│
-│── src/
-│   ├── main.py
-│   ├── train.py
-│   ├── intent_classifier.py
-│   ├── ner.py
-│   ├── executor.py
-│
-│── dashboard.py
-│── requirements.txt
-│── README.md
+├── data/
+│   └── intent_dataset.json        ← Training data
+├── models/                        ← Generated after training
+│   ├── intent_model.pkl
+│   └── vectorizer.pkl
+├── src/
+│   ├── main.py                    ← Entry point
+│   ├── train.py                   ← Model training
+│   ├── intent_classifier.py       ← TF-IDF + ML pipeline
+│   ├── ner.py                     ← Regex NER engine
+│   └── executor.py                ← OS-level actions
+├── dashboard.py                   ← Streamlit evaluation dashboard
+├── requirements.txt
+└── README.md
 ```
 
----
-
-### 5️⃣ Train the NLP Model
-
-Before using the assistant, train the model:
+### 5. Train the model
 
 ```bash
 python src/train.py
 ```
 
-This generates:
-
-```text
-models/
-│── intent_model.pkl
-│── vectorizer.pkl
+This runs GridSearchCV across LogisticRegression and LinearSVC, selects the best model, and saves:
+```
+models/intent_model.pkl
+models/vectorizer.pkl
 ```
 
----
-
-### 6️⃣ Run the Desktop Assistant
-
-Start the assistant:
+### 6. Run the assistant
 
 ```bash
 python src/main.py
 ```
 
-Example commands:
-
-```text
+Try these commands:
+```
 create notes.txt
-open report.pdf
-delete temp.txt
-rename old.txt to new.txt
-move report.pdf to documents
-copy notes.txt to backup
-search python tutorial on google
+rename notes.txt to summary.txt
+move summary.txt to Downloads
+search for python tutorial on google
+look for lofi music on youtube
+find neural networks on wikipedia
+extract archive.zip
 ```
 
----
-
-### 7️⃣ Run Evaluation Dashboard
-
-Launch the Streamlit dashboard:
+### 7. Launch the evaluation dashboard
 
 ```bash
 streamlit run dashboard.py
 ```
 
 The dashboard provides:
-
-- NLP model accuracy
-- NER evaluation
-- Intent-wise metrics
+- Intent classification accuracy · confusion matrix · per-class F1
+- NER exact-match accuracy per intent
 - End-to-end pipeline evaluation
-- Confusion matrix
-- Model comparison
+- LogisticRegression vs LinearSVC model comparison
 
 ---
 
-### 8️⃣ Common Issues
+## 🔍 Evaluation — 3 Layers
 
-#### Model Not Found Error
+Most NLP projects report one accuracy number. DAWN reports three.
 
-If you get:
+```
+Layer 1 — Intent Classifier
+  Tests the ML model in isolation.
+  Metrics: accuracy · precision · recall · F1 · confusion matrix
 
-```text
-FileNotFoundError: intent_model.pkl
+Layer 2 — NER Engine
+  Tests regex entity extraction in isolation.
+  Metric: exact-match accuracy across 13 entity-bearing intent types
+
+Layer 3 — End-to-End Pipeline
+  Both intent AND entities must match ground truth.
+  Metric: full pipeline pass rate (90% on 48 test cases)
 ```
 
-Run:
+---
 
+## 🐛 Common Issues
+
+<details>
+<summary><b>FileNotFoundError: intent_model.pkl</b></summary>
+
+You haven't trained the model yet. Run:
 ```bash
 python src/train.py
 ```
+</details>
 
----
-
-#### Missing Dependencies
-
-Run:
+<details>
+<summary><b>Missing dependencies</b></summary>
 
 ```bash
 pip install -r requirements.txt
 ```
+</details>
 
-or
+<details>
+<summary><b>Virtual environment won't activate on Windows PowerShell</b></summary>
 
-```bash
-pip install scikit-learn streamlit plotly pandas numpy
-```
-
----
-
-#### Virtual Environment Not Activating
-
-For Windows:
-
-```bash
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 venv\Scripts\activate
 ```
+</details>
 
-If PowerShell blocks execution:
+<details>
+<summary><b>Command not recognised</b></summary>
 
-```bash
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-Then activate again.
+The assistant handles 16 specific intent classes. Commands that don't match any class return "Command not recognised." Check the supported commands listed in the Features section above.
+</details>
 
 ---
+
+## 👨‍💻 Authors
+
+<div align="center">
+
+**Krish Agrawal** · **Prathmesh Agrawal**
+
+*B.Tech Final Year Project · Department of Computer Science · 2024–25*
+
+</div>
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+<div align="center">
+
+*Built with Python. Runs offline. Understands you.*
+
+**⭐ Star this repo if you found it useful**
+
+</div>
